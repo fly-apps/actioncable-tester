@@ -1,6 +1,6 @@
 require "test_helper"
 
-class TimeoutDiagnosticsControllerTest < ActionDispatch::IntegrationTest
+class StreamTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

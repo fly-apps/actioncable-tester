@@ -1,0 +1,12 @@
+<h1>Stream</h1>
+
+<p>Opens a stream the to server.</p>
+
+<p>Stream name: <code><%= @stream.name %></code></p>
+
+<p>Broadcast from Rails console via: <code>Stream.find(<%= @stream.name.inspect %>).broadcast</code></p>
+
+<p><%= link_to "Ping Stream", stream_pings_path(@stream), data: { "turbo-method": :post } %><p>
+
+<h2>Stream</h2>
+<%= turbo_stream_from @stream.name %>

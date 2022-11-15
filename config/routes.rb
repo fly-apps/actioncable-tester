@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  get "/timeouts", to: "timeout_diagnostics#index"
+  resources :streams do
+    scope module: :streams do
+      resources :pings, only: :create
+    end
+  end
+
   root "readme#index"
 end
