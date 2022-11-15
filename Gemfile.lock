@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/superfly/actioncable_redis-reconnect.git
+  revision: e1e6d857f92d18d390a49feef284f9b706d65773
+  specs:
+    actioncable_redis-reconnect (0.1.0)
+      actioncable (>= 7.0, <= 7.0.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -208,6 +215,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  actioncable_redis-reconnect!
   bootsnap
   capybara
   debug
