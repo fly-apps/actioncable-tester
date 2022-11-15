@@ -2,11 +2,13 @@
 
 <p>Opens a stream the to server.</p>
 
-<p>Stream name: <code><%= @stream.name %></code></p>
+<p>Stream name: <code><%= @stream.channel_name %></code></p>
 
-<p>Broadcast from Rails console via: <code>Stream.find(<%= @stream.name.inspect %>).broadcast</code></p>
+<p>Broadcast from Rails console via: <code>Stream.find(<%= @stream.channel_name.inspect %>).broadcast</code></p>
 
 <p><%= link_to "Ping Stream", stream_pings_path(@stream), data: { "turbo-method": :post } %><p>
 
+<p><%= link_to "Send 1000 messages", stream_sequences_path(@stream), data: { "turbo-method": :post } %><p>
+
 <h2>Stream</h2>
-<%= turbo_stream_from @stream.name %>
+<%= turbo_stream_from @stream.channel_name %>

@@ -12,10 +12,10 @@ class Stream
   end
 
   def broadcast(body: self.class.generate_message)
-    ActionCable.server.broadcast(name, { body: body })
+    ActionCable.server.broadcast(channel_name, { body: body })
   end
 
-  def name
+  def channel_name
     "streams_#{to_param}"
   end
 
