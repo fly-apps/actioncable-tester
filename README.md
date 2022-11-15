@@ -1,3 +1,9 @@
-# README
+# Actioncable Tester
 
-This application is a very simple Rails app designed to be used to test ActionCable connections on your web host.
+<!-- This REAMDE should be read by running `./bin/rails server` -->
+
+A simple Rails app to test ActionCable installations.
+
+## Tests
+
+[Timeout Diagnostics](/timeouts)
