@@ -73,4 +73,4 @@ end
 
 gem "redcarpet", "~> 3.5"
 
-gem "actioncable_redis-reconnect", github: "superfly/actioncable_redis-reconnect"
+gem "actioncable_redis-reconnect"#, github: "superfly/actioncable_redis-reconnect"
