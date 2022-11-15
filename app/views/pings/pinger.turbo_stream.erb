@@ -1,0 +1,6 @@
+<%= turbo_stream.replace "pinger" do %>
+  <%= turbo_frame_tag "pinger", src: pinger_path(format: :turbo_stream), disabled: true, data: { controller: "deferred-turbo-frame", wait: msec_between_pings } %>
+  <li>
+    <%= render template: "pings/ping" %>
+  </li>
+<% end %>

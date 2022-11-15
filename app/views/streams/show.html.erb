@@ -8,7 +8,7 @@
 
 <p><%= link_to "Ping Stream", stream_pings_path(@stream), data: { "turbo-method": :post } %><p>
 
-<p><%= link_to "Send 1000 messages", stream_sequences_path(@stream), data: { "turbo-method": :post } %><p>
+<p><%= link_to "Send 1000 messages", stream_batches_path(@stream), data: { "turbo-method": :post } %><p>
 
 <h2>Stream</h2>
 <%= turbo_stream_from @stream.channel_name %>

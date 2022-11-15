@@ -1,0 +1,7 @@
+<h1>Pinger</h1>
+
+<p>Let's see how much latency exists between you and the server:</p>
+
+<ol reversed>
+  <%= turbo_frame_tag "pinger", src: pinger_path(format: :turbo_stream) %>
+</ol>
