@@ -11,4 +11,5 @@
 <p><%= link_to "Send 1000 messages", stream_batches_path(@stream), data: { "turbo-method": :post } %><p>
 
 <h2>Stream</h2>
-<%= turbo_stream_from @stream.channel_name, id: @stream.channel_name %>
+<%= turbo_stream_from @stream.channel_name %>
+<ol class="messages" id="<%= @stream.channel_name %>" reversed></ol>

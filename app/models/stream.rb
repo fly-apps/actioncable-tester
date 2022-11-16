@@ -12,7 +12,7 @@ class Stream
   end
 
   def broadcast(body: self.class.generate_message)
-    Turbo::StreamsChannel.broadcast_append_to \
+    Turbo::StreamsChannel.broadcast_prepend_to \
       channel_name,
       target: channel_name,
       partial: "streams/message",
