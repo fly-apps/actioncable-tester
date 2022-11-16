@@ -1,4 +1,3 @@
-# ./app/controllers/pings_controller.rb
 class PingsController < ApplicationController
   # These helpers exist to make this demo more self-contained. In practice
   # you might use instance variables and/or view helpers.

@@ -12,7 +12,11 @@ class Stream
   end
 
   def broadcast(body: self.class.generate_message)
-    ActionCable.server.broadcast(channel_name, { body: body })
+    Turbo::StreamsChannel.broadcast_append_to \
+      channel_name,
+      target: channel_name,
+      partial: "streams/message",
+      locals: { stream: self, body: body }
   end
 
   def channel_name
